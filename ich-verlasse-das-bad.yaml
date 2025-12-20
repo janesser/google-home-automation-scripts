@@ -16,10 +16,17 @@ automations:
       is: Ich höre jetzt auf zu duschen
 
   actions:
+    - type: assistant.command.OkGoogle
+      okGoogle: Starte Timer für 10 Minuten
+      devices: Badezimmer - Badezimmer
+    - type: time.delay
+      for: 5min
     - type: device.command.OnOff
       on: true
       devices:
         - Entfeuchtung - Badezimmer
+    - type: time.delay
+      for: 7min
     - type: assistant.command.OkGoogle
-      okGoogle: Starte Timer für 5 Minuten
+      okGoogle: Stop
       devices: Badezimmer - Badezimmer
