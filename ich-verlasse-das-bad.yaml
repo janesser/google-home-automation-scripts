@@ -27,6 +27,6 @@ automations:
         - Entfeuchtung - Badezimmer
     - type: time.delay
       for: 7min
-    - type: assistant.command.OkGoogle
-      okGoogle: Stop
+    - type: device.command.OnOff
       devices: Badezimmer - Badezimmer
+      on: false
